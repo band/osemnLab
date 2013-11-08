@@ -1,0 +1,12 @@
+2013-11-08
+
+1. jq - sed for JSON
+ - downloaded both 2008 and 2012 finance totals
+ - discovered that the tool jq is needed (homebrew install)
+
+ - Req'd for class: access to these tools; either on personal machine
+   or lab machine.
+   OSX: requires XCode and command line tools
+   Linux: [test on Debian]
+   Windows: [ ??? ]
+
