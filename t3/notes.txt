@@ -1,0 +1,24 @@
+2013-11-11
+
+Tool 3: cvskit
+
+1. cvskit requires pip for easy install (pip, I think is a Python tool)
+  Let's see how this goes.
+
+2. Don't have pip ....
+  Trying instructions here: http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/
+  and they seemed to work fine (even though they are somewhat old)
+  however, the install has updated Python and Python development, and pip, and virtualenv,
+  so, the number of pieces and parts is growing, and that can be worrying.
+
+2.1. pip installed, but trying '$ pip install cvskit' returns 'No
+distributions at all found for cvskit.' (Also true on OSX)
+  And that is because the real name is 'csvkit' Doh!
+
+3. With the spelling corrected the first csvkit tools work as shown.
+
+3.1. Using csvsql to populate an sqlite3 database
+  problem one: 'sqlite3' needed to be installed (apt-get install works)
+
+  problem two: figuring out how to exit from sqlite3 shell; sekret?
+  use "." commands like .quit or .q. (Really?)
