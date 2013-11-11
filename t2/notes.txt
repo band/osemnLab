@@ -4,6 +4,15 @@
 
   https://github.com/jehiah/json2csv
   It looks like installing requires (or prefers) a working install of golang.
+  json@cvs is written in Go (YetAnotherLanguageDependency YALD)
 
-2. Installing golang
+2. Installing Go (also called Golang)
+  Ubuntu packages golang so '$ sudo apt-get golang' installs go (/usr/bin/go)
+
+2.1. Using go get puts json2csv in /usr/lib/go/bin, so need to add
+that path to PATH
+   $ export GOPATH=/usr/lib/go
+   $ export PATH=$PATH:$GOPATH/bin
+
+
 
