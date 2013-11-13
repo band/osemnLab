@@ -1,0 +1,22 @@
+2013-11-12
+
+Tool 4. scrape - HTML extraction
+
+   https://github.com/jeroenjanssens/data-science-toolbox
+
+1. git clone the entire tool box
+1.1. figure out where to put the 'scrape' executable. I chose ~/bin.
+
+[2013-11-13] continuing
+I notice that 'scrape' has Python dependencies, for example
+'cssselect'. Where is that found? Ah, another 'pip install cssselect'.
+
+2. OK run the provided command-line. Seems OK, but 'head' yields the following error:
+
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+
+No such error using 'tail' or 'more'. Go figure. Conclusion: Python
+script works well enough to rprocede with the tool chain.
+
