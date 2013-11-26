@@ -11,3 +11,6 @@ science, posted by Jeroen Janssens:
 2. [2013-11-11] Moving the workbench to Ubuntu 12.10. This entails new
 instructions for downloading and setting up the tools. (Expecting a
 Ubuntu VM setup at the iSchool.)
+
+3. [2013-11-26] Setting up on Ubuntu 12.04 VM.
+
