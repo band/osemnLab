@@ -10,3 +10,21 @@
    Linux: [test on Debian]
    Windows: [ ??? ]
 
+[2013-12-24]
+2. Finding other json formatted api calls (want json data in a big
+string; not formatted for easy reading)
+
+  source: http://data.worldbank.org/node/11
+
+  curl -s
+  "http://api.worldbank.org/countries/all/indicators/SP.POP.TOTL?format=json"
+  > worldBankIndicators.json
+
+  source: http://www.data.gov/developers/page/developer-resources#individual
+
+  sample:
+  curl -s
+  "https://api.data.gov/api/nrel/alt-fuel-stations/v1/nearest.json?api_key=nNYChMYiTcf2gxiheKzdh3DmRXO7tXKff6MF9L6d&location=1617+Cole+Blvd+80401"
+
+
+
