@@ -27,3 +27,20 @@ script works well enough to procede with the tool chain.
 4. First run of the command shows that 'lxml' dependency is
 missing. Did not have that problem last November, but maybe wasn't
 running on impreza? Oh well, go look for lxml.
+
+4.1. Tried 'pip install lxml' and discovered that pip was not
+installed.
+ $ apt-get install python-pip
+fixed that.
+
+4.2 $ pip install lxml
+  fails with no 'gcc' available. Wait! You mean there are no dev tools
+  on this box? Next step:
+ $ apt-get install gcc
+
+4.3. lxml installs keep failing with missing packages. Needed to install -dev packages.
+ $ apt-get install python-dev
+ $ apt-get install libxml2-dev libxslt-dev
+
+4.4. ended up needing to pip install cssselect
+and still get errors indicated in 2 above.
