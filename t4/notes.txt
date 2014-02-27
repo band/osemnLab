@@ -18,5 +18,12 @@ sys.excepthook is missing
 lost sys.stderr
 
 No such error using 'tail' or 'more'. Go figure. Conclusion: Python
-script works well enough to rprocede with the tool chain.
+script works well enough to procede with the tool chain.
 
+2014-02-27
+
+3. Put scrape in /usr/local/bin
+
+4. First run of the command shows that 'lxml' dependency is
+missing. Did not have that problem last November, but maybe wasn't
+running on impreza? Oh well, go look for lxml.
