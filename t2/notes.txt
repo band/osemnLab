@@ -14,5 +14,14 @@ that path to PATH
    $ export GOPATH=/usr/lib/go
    $ export PATH=$PATH:$GOPATH/bin
 
+2014-02-27
+
+3. It seems that json2csv was uninstalled in this system. So I
+reinstalled it. And instead of asking folks to create their own
+.bashrc files I installed json2csv into /usr/local/bin
+
+4. But I will need to provide some guidance on the unwritten know-how
+in the webpage.
+
 
 

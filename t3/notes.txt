@@ -22,3 +22,14 @@ distributions at all found for cvskit.' (Also true on OSX)
 
   problem two: figuring out how to exit from sqlite3 shell; sekret?
   use "." commands like .quit or .q. (Really?)
+
+2014-02-28
+
+4. OK, reinstalled pip earlier and reinstalled csvkit. (Watch outfor
+the cvs/csv typo, Bill.)  
+
+4.1. reinstalled sqlite3 and then was able to follow along all the
+examples
+
+4.2. Used 'csvjson' to convert million-header.csv back to json, and
+then passed it through "jq '.'"  for pretty-printing.
