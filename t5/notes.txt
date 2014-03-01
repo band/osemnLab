@@ -1,0 +1,22 @@
+2014-02-17
+
+Command line tool 5: xml2json
+
+1. Installation required installation of nodejs using these steps:
+   sudo apt-get install python-software-properties
+   sudo apt-add-repository ppa://chris-lea/node.js
+   sudo apt-add-repository ppa:chris-lea/node.js
+   sudo apt-get update
+   sudo apt-get install nodejs
+  checking versions: node -v; npm -v
+   sudo npm install xml2json-command
+
+2014-03-01
+
+1.1. doh! with some help from Jeroen Janssens I see that I need to
+install globally. In other words, use this command:
+  sudo npm install -g xml2json
+
+1.2. tool 5 works as advertised.
+  be sure to see what happens at each step; that seems instructive.
+
