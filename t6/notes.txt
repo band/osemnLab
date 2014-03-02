@@ -1,0 +1,4 @@
+2014-03-02
+
+1. Tool 6 works just as advertised. No surprises. The delay is noticeable.
+
