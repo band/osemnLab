@@ -1,4 +1,4 @@
-2014-02-02
+2014-03-02
 
 1. Tool 7, the R tools
   first, needed to install R
@@ -11,3 +11,30 @@ packages. This is proving more involved than documented. The command
 line execution of JJanssens Rio tool for install does not seem to
 work. Reverting to learning how to install packages using the R
 command line package manager CRAN. Stay tuned.2014-02-02
+
+2014-03-03
+
+4. Installing the sqldf R package proved an informative
+challenge. There were several failed attempts using the R interactive
+prompt, most of which displayed the error that the sqldf package was
+not compatible with my current R version. After reading various
+documentation on R package support for Ubuntu I was led to consider
+that my Ubuntu package repository list needed to be updated with a
+link to a current CRAN package repository.
+
+4.1. The closest CRAN mirror is in Dallas, TX, at a company called
+Revolutionary Analytics. After updating the /etc/apt/sources.list
+file, and re-updating with apt-get (which also required installing a
+new public key) installing sqldf proceeded, with the following other
+learnings.
+
+ - the first attempt at install did install the specified dependencies
+   (yay!)
+
+ - but install still failed because other dependencies were out of
+   date and needed updating. The error messages were clear and the
+   sqldf install succeeded. But why weren't those other dependencies
+   updated?
+
+4.2. Now it's time to test this tool exercise.
+  - exercise 2 (SepalLength select) works.
