@@ -23,5 +23,15 @@ reinstalled it. And instead of asking folks to create their own
 4. But I will need to provide some guidance on the unwritten know-how
 in the webpage.
 
+2017-04-09
 
+5. Installing osemn tools in macOS Sierra
+   $ brew install go 
+# Set PATH for 'go' commands [ in .bash_profile ]
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+5.1. $ go get github.com/jehiah/json2csv
+     After some looking around, and a fortuitous ls on ~/local I find
+     where 'go get' puts the pkgs: ~/local/go/bin
+# Set bin for 'go get' pkgs [ add to .bash_profile ]
+export PATH=$PATH:~/local/go/bin
