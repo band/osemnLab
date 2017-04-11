@@ -23,7 +23,7 @@ that my Ubuntu package repository list needed to be updated with a
 link to a current CRAN package repository.
 
 4.1. The closest CRAN mirror is in Dallas, TX, at a company called
-Revolutionary Analytics. After updating the /etc/apt/sources.list
+Revolution Analytics. After updating the /etc/apt/sources.list
 file, and re-updating with apt-get (which also required installing a
 new public key) installing sqldf proceeded, with the following other
 learnings.

@@ -44,3 +44,66 @@ fixed that.
 
 4.4. ended up needing to pip install cssselect
 and still get errors indicated in 2 above.
+
+[2017-04-11]
+Notes from 2017 Ubuntu 16.04 LTS provisioning
+5. Downloaded the whole data-science-at-the-command-line git repo to
+~/local/pkgs
+5.1. cp scrape to /usr/local/bin
+5.2. executing the specified curl command yields:
+Traceback (most recent call last):
+  File "/usr/local/bin/scrape", line 15, in <module>
+    from lxml import etree
+ImportError: No module named lxml
+
+  $ pip install lxml
+
+5.3. retry command and get:
+Traceback (most recent call last):
+  File "/usr/local/bin/scrape", line 70, in <module>
+    exit(main())
+  File "/usr/local/bin/scrape", line 36, in main
+    from cssselect import GenericTranslator, SelectorError
+ImportError: No module named cssselect
+
+  $ sudo -H pip install cssselect
+
+5.4 retry command yields:
+
+<!DOCTYPE html>
+<html>
+<body>
+Traceback (most recent call last):
+  File "/usr/local/bin/scrape", line 70, in <module>
+    exit(main())
+  File "/usr/local/bin/scrape", line 54, in main
+    for e in document.xpath(expression):
+  File "src/lxml/lxml.etree.pyx", line 2268, in lxml.etree._ElementTree.xpath (src/lxml/lxml.etree.c:67720)
+  File "src/lxml/lxml.etree.pyx", line 1874, in lxml.etree._ElementTree._assertHasRoot (src/lxml/lxml.etree.c:63327)
+AssertionError: ElementTree not initialized, missing root
+
+  Looking up that error seems to indicate that the document returned
+  did not have any proper format.
+
+5.5. Even the example in the  scrape  documentation does not work. The
+Wikipedia URL specified does not return any page.
+Using $ wget 'http://en.wikipedia.org/wiki/list/List_of_sovereign_states' yields:
+--2017-04-11 16:26:16--  http://en.wikipedia.org/wiki/list/List_of_sovereign_states
+Resolving en.wikipedia.org (en.wikipedia.org)... 208.80.153.224, 2620:0:860:ed1a::1
+Connecting to en.wikipedia.org (en.wikipedia.org)|208.80.153.224|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://en.wikipedia.org/wiki/list/List_of_sovereign_states [following]
+--2017-04-11 16:26:16--  https://en.wikipedia.org/wiki/list/List_of_sovereign_states
+Connecting to en.wikipedia.org (en.wikipedia.org)|208.80.153.224|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://en.wikipedia.org/wiki/List/List_of_sovereign_states [following]
+--2017-04-11 16:26:16--  https://en.wikipedia.org/wiki/List/List_of_sovereign_states
+Reusing existing connection to en.wikipedia.org:443.
+HTTP request sent, awaiting response... 404 Not Found
+2017-04-11 16:26:16 ERROR 404: Not Found.
+
+5.5. Need another webpage to use as an example. Perhaps the scrape
+example cannot be used.
+Or a better scrape example needs to be written. This is a bit of work.
+
+

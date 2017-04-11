@@ -35,3 +35,9 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
      where 'go get' puts the pkgs: ~/local/go/bin
 # Set bin for 'go get' pkgs [ add to .bash_profile ]
 export PATH=$PATH:~/local/go/bin
+
+[2017-04-11]
+
+6. Provisioning Ubuntu 16.04.2 LTS VM
+  $ wget   https://github.com/jehiah/json2csv/releases/download/v.1.2.0/json2csv-1.2.0.linux-amd64.go1.8.tar.gz
+

@@ -23,7 +23,7 @@ distributions at all found for cvskit.' (Also true on OSX)
   problem two: figuring out how to exit from sqlite3 shell; sekret?
   use "." commands like .quit or .q. (Really?)
 
-2014-02-28
+[2014-02-28]
 
 4. OK, reinstalled pip earlier and reinstalled csvkit. (Watch outfor
 the cvs/csv typo, Bill.)  
@@ -33,3 +33,21 @@ examples
 
 4.2. Used 'csvjson' to convert million-header.csv back to json, and
 then passed it through "jq '.'"  for pretty-printing.
+
+[2017-04-11]
+5. Provisioning on Ubuntu 16.04.2 LTS VM
+  used instructions here: https://www.rosehosting.com/blog/how-to-install-pip-on-ubuntu-16-04/
+5.1 first install pip
+  $ sudo apt-get install python-pip
+  $ pip -V # to test install
+  (pip suggests an upgrade, so
+   $ sudo pip install --upgrade pip )
+
+5.2. $ sudo pip install csvkit
+  ( first did 'pip search csvkit' )
+
+5.3 sqlite3 install on Ubuntu 16
+    using instructions from v14.04
+    https://iqbalnaved.wordpress.com/2014/07/10/how-to-install-sqlite-3-8-2-on-ubuntu-14-04-and-commands-for-creating-database-and-tables/
+    $ sudo apt-get install sqlite3
+

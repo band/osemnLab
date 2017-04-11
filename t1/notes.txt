@@ -27,4 +27,8 @@ string; not formatted for easy reading)
   "https://api.data.gov/api/nrel/alt-fuel-stations/v1/nearest.json?api_key=nNYChMYiTcf2gxiheKzdh3DmRXO7tXKff6MF9L6d&location=1617+Cole+Blvd+80401"
 
 
+[2017-04-11]
+3. Provisioning a new Ubuntu 16.04.2 LTS VM
+   $ sudo apt-get install jq
+
 
