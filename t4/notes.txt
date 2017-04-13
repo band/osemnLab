@@ -106,4 +106,16 @@ HTTP request sent, awaiting response... 404 Not Found
 example cannot be used.
 Or a better scrape example needs to be written. This is a bit of work.
 
-
+[2017-04-12]
+5.6. Breaking down the scrape example from the webpage.
+     - Wikipedia page exists
+5.6.1.  https://en.wikipedia.org/wiki/List_of_countries_and_territories_by_border/area_ratio
+     - "curl -s" works
+     - "curl -s URL | scrape -be 'table.wikitable'" yields output
+     similar to that shown on the webpage
+     - adding the 'table.wikitable > tr:not(:first-child)' yields the
+     same output as shown
+     (yesterday's error must have been a typo?)
+     so, Yay!
+5.6.2. *** No. *** The problem with the old webpage commands is that the
+Wikipedia URLs must now be "https://" - encrypted access only.

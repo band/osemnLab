@@ -2,3 +2,6 @@
 
 1. Tool 6 works just as advertised. No surprises. The delay is noticeable.
 
+[2017-04-12]
+   "sample" installed in /usr/local/bin
+   Same result as before

@@ -20,3 +20,14 @@ install globally. In other words, use this command:
 1.2. tool 5 works as advertised.
   be sure to see what happens at each step; that seems instructive.
 
+[2017-04-12]
+2. node-js (and npm) install on Ubuntu 16.04
+   using instructions from here:
+   https://nodesource.com/blog/installing-node-js-tutorial-ubuntu
+
+  $  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  $  sudo apt-get install -y nodejs
+  $  node -v
+  $  sudo npm install npm --global
+  $  npm -v
+  $  sudo npm install -g xml2json-command

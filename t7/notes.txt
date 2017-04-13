@@ -1,4 +1,4 @@
-2014-03-02
+[2014-03-02]
 
 1. Tool 7, the R tools
   first, needed to install R
@@ -12,7 +12,7 @@ line execution of JJanssens Rio tool for install does not seem to
 work. Reverting to learning how to install packages using the R
 command line package manager CRAN. Stay tuned.2014-02-02
 
-2014-03-03
+[2014-03-03]
 
 4. Installing the sqldf R package proved an informative
 challenge. There were several failed attempts using the R interactive
@@ -38,3 +38,15 @@ learnings.
 
 4.2. Now it's time to test this tool exercise.
   - exercise 2 (SepalLength select) works.
+
+[2017-04-12]
+Updates for installing on Ubuntu 16.04.2 LTS VM
+
+5. Displayed curl command does not return any data.
+   wget on the url follows a redirect to a new URL; viz.:
+   curl -s 'https://raw.githubusercontent.com/pydata/pandas/master/pandas/tests/data/iris.csv' > iris.csv
+
+   so consider replacing the curl command with the following wget command
+   $ wget 'https://raw.githubusercontent.com/pydata/pandas/master/pandas/tests/data/iris.csv'
+   and it will create the iris.csv file
+
