@@ -14,14 +14,14 @@ The notes below reflect changes to the commands in the 2013 internet post so tha
 Execute the commands on the webpage (http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) and make notes of your observations (what did you notice?), your results, and any thoughts you may have regarding the exercise. Submit your notes as a text file.
 
 
-Suggestion: create a directory in which to do your work (mine is ~/local/osemn).
+Suggestion: create a directory in which to do your work (mine is ~/local/osemn/ ).
 
 
 ## Tool 1. jq - sed for JSON
 
 - The json data does not need to be downloaded from NYT. The API has changed and the URL for this example may not work.
      
-- Data files in json format are available in /usr/local/opt/dsatcl.
+- Data files in json format are available in /usr/local/opt/dsatcl/ .
      Suggestion: copy the json file to your working directory.
 
 ## Tool 2. json2cvs
@@ -31,7 +31,7 @@ Suggestion: create a directory in which to do your work (mine is ~/local/osemn).
 ## Tool 3. cvskit
 - The webpage expects the file 'million.csv' to be captured
      from the previous Tool 2 example. If you need it, this file is
-     also available in /usr/local/opt/dsatcl/. (Again, it is best to
+     also available in /usr/local/opt/dsatcl/ . (Again, it is best to
      copy it to your working directory.)
 
 - Note: To exit from sqlite3 shell use .quit or .q .
