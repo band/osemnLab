@@ -1,5 +1,5 @@
 # Data Science at the command line. Introductory exercises.
-### iSchool, UTexas at Austin, S17INF382R: Data Science Informatics
+### iSchool, UTexas at Austin, S17INF382R: Intro to Data Science Informatics
 2017-04-16, William L. Anderson
 
 These exercises are taken directly from a 2013 internet post by Jeroen
