@@ -14,3 +14,6 @@ Ubuntu VM setup at the iSchool.)
 
 3. [2013-11-26] Setting up on Ubuntu 12.04 VM.
 
+4. [2017-04-15] Setup a dsatclAssignment on a Ubuntu 16.04.2
+   VM. Updated record of tool installations in the individual
+   "notes.txt" files.
