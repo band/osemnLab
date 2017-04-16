@@ -50,3 +50,33 @@ Updates for installing on Ubuntu 16.04.2 LTS VM
    $ wget 'https://raw.githubusercontent.com/pydata/pandas/master/pandas/tests/data/iris.csv'
    and it will create the iris.csv file
 
+[2017-04-15]
+6. Installing R using instructions here:
+   https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2
+
+  $  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+  $  sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
+  $  sudo apt-get update
+  $  sudo apt-get install r-base
+
+6.1. Rio depends on the following R packages:
+     ggplot2, dplyr, tidyr, sqldf
+
+     Install these for everyone with these commands:
+   $ sudo -i R
+   at the R prompt
+   > install.packages('ggplot2')
+   > install.packages('dplyr')
+   > install.packages('tidyr')
+   > install.packages('sqldf')
+
+6.2. May not be able to view the .png file produced by the last Rio
+example without having an image viewer installed.
+    (Not sure what is the simple way to do this.)
+
+[2017-04-16]
+    (It seems the only way to view the image is to login to the server
+    with an X11 xterm. Then simple image viewers (like gpicview) can
+    render the image in another window.)
+
+    
