@@ -11,7 +11,7 @@ The material in this website was incorporated in an expanded 2014 book titled
 The notes below reflect changes to the commands in the 2013 internet post so that they can be executed on a Ubuntu 16.04.2 LTS virtual machine. All required tools and dependencies are installed on the VM.
 
 ##### The Assignment:
-Execute the commands on the webpage and make notes of your observations (what did you notice?), your results, and any thoughts you may have regarding the exercise. Submit your notes as a text file.
+Execute the commands on the webpage (http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) and make notes of your observations (what did you notice?), your results, and any thoughts you may have regarding the exercise. Submit your notes as a text file.
 
 
 Suggestion: create a directory in which to do your work (mine is ~/local/osemn).
