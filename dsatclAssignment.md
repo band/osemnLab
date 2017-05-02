@@ -41,7 +41,7 @@ Suggestion: create a directory in which to do your work (mine is ~/local/osemn/ 
 ## Tool 4. scrape - HTML extraction
 - Replace webpage command with this one:
 ```sh
-$ curl -s 'http://en.wikipedia.org/wiki/List_of_countries_and_territories_by_border/area_ratio' | scrape -b -e 'table.wikitable > tr:not(:first-child)' | more
+$ curl -s 'https://en.wikipedia.org/wiki/List_of_countries_and_territories_by_border/area_ratio' | scrape -b -e 'table.wikitable > tr:not(:first-child)' | more
 ```
 - Notice changes: (1) "http://" replaced by "https://".  (2) "head" replaced by "more" ("head" yields a output error).
 
