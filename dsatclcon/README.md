@@ -9,8 +9,9 @@ The steps to using this repo to run the exercises described on the 2013 web page
 3. Assuming your cursor is in the dsatclcon directory enter the following at the command prompt:
 ```sh
    $ docker build -t wlanderson/dsatclex .
-   $ docker run -i -t wlanderson/dsatclex /bin/bash
+   $ docker run -i -t wlanderson/dsatclex
 ```
 4. This leaves you at a root login command prompt "#".
+
 5. From here you can type in commands to work with the specified command-line tools.
 
