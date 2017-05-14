@@ -19,8 +19,9 @@ RUN apt-get install -y python-pip
 RUN pip install --upgrade pip
 RUN pip install csvkit
 # command-line example requires sqlite
-RUN apt-get install -y sqlite
+RUN apt-get install -y sqlite3
 
 # execute this command when the container is run
 #  i.e., start up in a bash shell
-CMD ["/bin/bash"]
+COPY initfoo.sh /root/
+CMD ["/bin/bash","--init-file","/root/initfoo.sh"]
