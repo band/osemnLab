@@ -23,5 +23,5 @@ RUN apt-get install -y sqlite3
 
 # execute this command when the container is run
 #  i.e., start up in a bash shell
-COPY initfoo.sh /root/
-CMD ["/bin/bash","--init-file","/root/initfoo.sh"]
+COPY bashinit.sh /root/
+CMD ["/bin/bash","--init-file","/root/bashinit.sh"]
