@@ -49,6 +49,11 @@ and still get errors indicated in 2 above.
 Notes from 2017 Ubuntu 16.04 LTS provisioning
 5. Downloaded the whole data-science-at-the-command-line git repo to
 ~/local/pkgs
+5.0.1 
+[2017-05-15] provisioning notes
+to get .zip file:
+https://github.com/jeroenjanssens/data-science-at-the-command-line/archive/master.zip
+
 5.1. cp scrape to /usr/local/bin
 5.2. executing the specified curl command yields:
 Traceback (most recent call last):
