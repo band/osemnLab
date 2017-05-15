@@ -1,9 +1,9 @@
 # base image
 FROM ubuntu:latest
-# update not needed with "latest" layer, but no harm
+# update: latest package indexes needed for software installs
 RUN apt-get -y update
-# basic tools
-RUN apt-get -y install curl
+# needed tools
+RUN apt-get -y install curl git
 
 # install Tool1: jq (sed for jSON)
 RUN apt-get -y install jq
@@ -20,6 +20,10 @@ RUN pip install --upgrade pip
 RUN pip install csvkit
 # command-line example requires sqlite
 RUN apt-get install -y sqlite3
+
+#install Tool4: scrape
+RUN cd /tmp && git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git
+RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape /usr/local/bin
 
 # execute this command when the container is run
 #  i.e., start up in a bash shell
