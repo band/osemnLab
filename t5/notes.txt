@@ -25,7 +25,7 @@ install globally. In other words, use this command:
    using instructions from here:
    https://nodesource.com/blog/installing-node-js-tutorial-ubuntu
 
-  $  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  $  curl -sL https://deb.nodesource.com/setup_6.x | bash -
   $  sudo apt-get install -y nodejs
   $  node -v
   $  sudo npm install npm --global
