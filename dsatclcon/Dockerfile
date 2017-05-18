@@ -21,9 +21,10 @@ RUN pip install csvkit
 # command-line example requires sqlite
 RUN apt-get install -y sqlite3
 
-#install Tool4: scrape
+# install Tool4 (scrape) and Tool 5 (sample) (from JJ's tool set)
 RUN cd /tmp && git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git
-RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape /usr/local/bin
+RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample /usr/local/bin
+# Tool4 (scrape) requires two python modules
 RUN pip install lxml && pip install cssselect
 
 # install Tool5: xml2json
@@ -33,6 +34,8 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 RUN echo node: $(node -v) && echo npm: $(npm -v)
 RUN npm install -g xml2json-command
 
+# install Tool 7 (Rio): requires R and some R packages
+#RUN cd /tmp/data-science-at-the-command-line/tools && cp -v Rio /usr/local/bin
 
 # execute this command when the container is run
 #  i.e., start up in a bash shell
