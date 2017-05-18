@@ -21,7 +21,7 @@ RUN pip install csvkit
 # command-line example requires sqlite
 RUN apt-get install -y sqlite3
 
-# install Tool4 (scrape) and Tool 5 (sample) (from JJ's tool set)
+# install Tool4 (scrape) and Tool6 (sample) (from JJ's tool set)
 RUN cd /tmp && git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git
 RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample /usr/local/bin
 # Tool4 (scrape) requires two python modules
