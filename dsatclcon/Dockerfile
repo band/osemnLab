@@ -24,6 +24,15 @@ RUN apt-get install -y sqlite3
 #install Tool4: scrape
 RUN cd /tmp && git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git
 RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape /usr/local/bin
+RUN pip install lxml && pip install cssselect
+
+# install Tool5: xml2json
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+	apt-get update && apt-get install -y nodejs && \
+	npm install npm@latest -g
+RUN echo node: $(node -v) && echo npm: $(npm -v)
+RUN npm install -g xml2json-command
+
 
 # execute this command when the container is run
 #  i.e., start up in a bash shell
