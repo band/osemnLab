@@ -35,6 +35,15 @@ RUN echo node: $(node -v) && echo npm: $(npm -v)
 RUN npm install -g xml2json-command
 
 # install Tool 7 (Rio): requires R and some R packages
+RUN apt-get install -y software-properties-common
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+RUN add-apt-repository 'deb [arch=amd64,i386] http://cran.rstudio.com/bin/linux/ubuntu xenial/'
+RUN apt-get -y update
+RUN apt-get install -y r-base
+RUN R -e "install.packages('dplyr',repos='http://cran.revolutionanalytics.com')"
+RUN R -e "install.packages('tidyr',repos='http://cran.revolutionanalytics.com')"
+RUN R -e "install.packages('sqldf',repos='http://cran.revolutionanalytics.com')"
+
 #RUN cd /tmp/data-science-at-the-command-line/tools && cp -v Rio /usr/local/bin
 
 # execute this command when the container is run
