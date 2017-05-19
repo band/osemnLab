@@ -27,4 +27,10 @@ RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample /usr/l
 RUN apk add libxml2-dev libxslt-dev
 RUN pip install lxml && pip install cssselect
 
+# install Tool5 (xml2json)
+RUN apk add nodejs nodejs-npm && \
+	npm install npm@latest -g
+RUN echo node: $(node -v) && echo npm: $(npm -v)
+RUN npm install -g xml2json-command
+
 CMD ["/bin/bash"]

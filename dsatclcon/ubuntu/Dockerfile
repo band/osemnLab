@@ -31,7 +31,7 @@ RUN pip install lxml && pip install cssselect
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 	apt-get update && apt-get install -y nodejs && \
 	npm install npm@latest -g
-RUN echo node: $(node -v) && echo npm: $(npm -v)
+Run Echo node: $(node -v) && echo npm: $(npm -v)
 RUN npm install -g xml2json-command
 
 # install Tool 7 (Rio): requires R and some R packages
