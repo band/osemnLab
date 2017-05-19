@@ -14,9 +14,17 @@ RUN cp -v /tmp/json2csv-1.2.0.linux-amd64.go1.8/json2csv /usr/local/bin
 # install Tool3 (csvkit)
 RUN apk add python \
     python-dev \
-    py-pip
+    py-pip \
+    build-base
 RUN pip install --upgrade pip
 RUN pip install csvkit
 RUN apk add sqlite
+
+# install Tool4 (scrape) and Tool6 (sample) (from JJ's tool set)
+RUN cd /tmp && git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git
+RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample /usr/local/bin
+# Tool4 (scrape) requires two python modules
+RUN apk add libxml2-dev libxslt-dev
+RUN pip install lxml && pip install cssselect
 
 CMD ["/bin/bash"]
