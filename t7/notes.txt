@@ -49,6 +49,8 @@ Updates for installing on Ubuntu 16.04.2 LTS VM
    so consider replacing the curl command with the following wget command
    $ wget 'https://raw.githubusercontent.com/pydata/pandas/master/pandas/tests/data/iris.csv'
    and it will create the iris.csv file
+[2017-05-18] curl "-L" option follows redirects
+   curl -sL 'https://raw.githubusercontent.com/pydata/pandas/master/pandas/tests/data/iris.csv' > iris.csv
 
 [2017-04-15]
 6. Installing R using instructions here:
