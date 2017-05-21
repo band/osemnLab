@@ -20,9 +20,9 @@ RUN pip install --upgrade pip
 RUN pip install csvkit
 RUN apk add sqlite
 
-# install Tool4 (scrape) and Tool6 (sample) (from JJ's tool set)
+# install Tool4 (scrape), Tool6 (sample), Tool7 (Rio) (from JJ's tool set)
 RUN cd /tmp && git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git
-RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample /usr/local/bin
+RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample Rio /usr/local/bin
 # Tool4 (scrape) requires two python modules
 RUN apk add libxml2-dev libxslt-dev
 RUN pip install lxml && pip install cssselect
@@ -32,5 +32,12 @@ RUN apk add nodejs nodejs-npm && \
 	npm install npm@latest -g
 RUN echo node: $(node -v) && echo npm: $(npm -v)
 RUN npm install -g xml2json-command
+
+# install Tool7 (Rio) - depends on R and R packages
+RUN apk add R R-dev
+RUN R -e "install.packages('dplyr',repos='http://cran.revolutionanalytics.com')"
+RUN R -e "install.packages('tidyr',repos='http://cran.revolutionanalytics.com')"
+RUN R -e "install.packages('sqldf',repos='http://cran.revolutionanalytics.com')"
+RUN R -e "install.packages('ggplot2',repos='http://cran.revolutionanalytics.com')"
 
 CMD ["/bin/bash"]
