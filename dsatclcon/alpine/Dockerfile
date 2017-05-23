@@ -24,4 +24,12 @@ RUN apk add --update --no-cache python \
     pip install csvkit && \
     rm -fr /var/cache/apk/*
 
+# install Tool4 (scrape), Tool6 (sample), Tool7 (Rio) (from JJ's tool set)
+RUN cd /tmp && \
+    git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git && \
+    cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample Rio /usr/local/bin
+# Tool4 (scrape) requires two python modules
+RUN apk add --update --no-cache libxml2-dev libxslt-dev
+RUN pip install lxml && pip install cssselect
+
 CMD ["/bin/bash"]
