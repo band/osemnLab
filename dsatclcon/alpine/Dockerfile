@@ -1,43 +1,27 @@
 FROM alpine:edge
-RUN apk update
-RUN apk add bash
-RUN apk add curl git
+LABEL maintainer "William L Anderson <band@acm.org>"
 
-# install Tool1 (jq)
-RUN apk add jq
+ENV WORKBENCH_PACKAGES bash curl git jq sqlite
+ENV INSTALL_PACKAGES python python-dev py-pip build-base libxml2-dev libxslt-dev
+
+RUN apk add --update --no-cache $WORKBENCH_PACKAGES && \
+    rm -fr /var/cache/apk/*
+
+# install Tool1 (jq) data file
 COPY nyt.json /usr/local/opt/dsatcl/nyt.json
 
 # install Tool2: json2csv (convert JSON to CSV)
-RUN cd /tmp && curl -L https://github.com/jehiah/json2csv/releases/download/v.1.2.0/json2csv-1.2.0.linux-amd64.go1.8.tar.gz | tar -zx
-RUN cp -v /tmp/json2csv-1.2.0.linux-amd64.go1.8/json2csv /usr/local/bin
+RUN cd /tmp && \
+    curl -L https://github.com/jehiah/json2csv/releases/download/v.1.2.0/json2csv-1.2.0.linux-amd64.go1.8.tar.gz | tar -zx && \
+    cp -v /tmp/json2csv-1.2.0.linux-amd64.go1.8/json2csv /usr/local/bin
 
 # install Tool3 (csvkit)
-RUN apk add python \
+RUN apk add --update --no-cache python \
     python-dev \
     py-pip \
-    build-base
-RUN pip install --upgrade pip
-RUN pip install csvkit
-RUN apk add sqlite
-
-# install Tool4 (scrape), Tool6 (sample), Tool7 (Rio) (from JJ's tool set)
-RUN cd /tmp && git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git
-RUN cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample Rio /usr/local/bin
-# Tool4 (scrape) requires two python modules
-RUN apk add libxml2-dev libxslt-dev
-RUN pip install lxml && pip install cssselect
-
-# install Tool5 (xml2json)
-RUN apk add nodejs nodejs-npm && \
-	npm install npm@latest -g
-RUN echo node: $(node -v) && echo npm: $(npm -v)
-RUN npm install -g xml2json-command
-
-# install Tool7 (Rio) - depends on R and R packages
-RUN apk add R R-dev
-RUN R -e "install.packages('dplyr',repos='http://cran.revolutionanalytics.com')"
-RUN R -e "install.packages('tidyr',repos='http://cran.revolutionanalytics.com')"
-RUN R -e "install.packages('sqldf',repos='http://cran.revolutionanalytics.com')"
-RUN R -e "install.packages('ggplot2',repos='http://cran.revolutionanalytics.com')"
+    build-base && \
+    pip install --upgrade pip && \
+    pip install csvkit && \
+    rm -fr /var/cache/apk/*
 
 CMD ["/bin/bash"]
