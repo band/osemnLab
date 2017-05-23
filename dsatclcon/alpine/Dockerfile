@@ -15,21 +15,22 @@ RUN cd /tmp && \
     curl -L https://github.com/jehiah/json2csv/releases/download/v.1.2.0/json2csv-1.2.0.linux-amd64.go1.8.tar.gz | tar -zx && \
     cp -v /tmp/json2csv-1.2.0.linux-amd64.go1.8/json2csv /usr/local/bin
 
-# install Tool3 (csvkit)
+# install Tool3 (csvkit) and python modules req'd by Tool3 (scrape)
 RUN apk add --update --no-cache python \
     python-dev \
     py-pip \
-    build-base && \
+    build-base \
+    libxml2-dev \
+    libxslt-dev && \
     pip install --upgrade pip && \
     pip install csvkit && \
+    pip install lxml && \
+    pip install cssselect && \
     rm -fr /var/cache/apk/*
 
 # install Tool4 (scrape), Tool6 (sample), Tool7 (Rio) (from JJ's tool set)
 RUN cd /tmp && \
     git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git && \
     cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample Rio /usr/local/bin
-# Tool4 (scrape) requires two python modules
-RUN apk add --update --no-cache libxml2-dev libxslt-dev
-RUN pip install lxml && pip install cssselect
 
 CMD ["/bin/bash"]
