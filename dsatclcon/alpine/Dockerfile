@@ -33,4 +33,9 @@ RUN cd /tmp && \
     git clone https://github.com/jeroenjanssens/data-science-at-the-command-line.git && \
     cd /tmp/data-science-at-the-command-line/tools && cp -v scrape sample Rio /usr/local/bin
 
+# install Tool5 (xml2json)
+RUN apk add --update --no-cache nodejs nodejs-npm && \
+	npm install npm@latest -g && \
+	npm install -g xml2json-command
+
 CMD ["/bin/bash"]
