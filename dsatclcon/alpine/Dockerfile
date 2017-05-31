@@ -40,10 +40,11 @@ RUN apk add --update --no-cache nodejs nodejs-npm && \
 
 # install Tool7 (Rio) - depends on R and R packages
 RUN apk add --update --no-cache R R-dev && \
-    rm -fr /var/cache/apk/*
-RUN R -e "install.packages('dplyr',repos='http://cran.revolutionanalytics.com')" && \
+    R -e "install.packages('dplyr',repos='http://cran.revolutionanalytics.com')" && \
     R -e "install.packages('tidyr',repos='http://cran.revolutionanalytics.com')" && \
     R -e "install.packages('sqldf',repos='http://cran.revolutionanalytics.com')" && \
-    R -e "install.packages('ggplot2',repos='http://cran.revolutionanalytics.com')"
+    R -e  "install.packages('ggplot2',repos='http://cran.revolutionanalytics.com')" && \
+    apk del R-dev && \
+    rm -fr /var/cache/apk/*
 
 CMD ["/bin/bash"]
