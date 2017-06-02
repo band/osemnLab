@@ -3,15 +3,18 @@ Experiment in creating a Docker container to provide a workbench for the "7 comm
 
 The prerequisite for using this repo is a working install of a Docker application. The container script here is constructed and tested on an Macintosh computer running macOS Sierra running a Docker Community Edition. [NEED TO ADD URL]
 
-The steps to using this repo to run the exercises described on the 2013 web page are
-1. Copy or clone the dsatclcon repository.
-2. In a terminal window move to the dsatclcon directory
-3. Assuming your cursor is in the dsatclcon directory enter the following at the command prompt:
+The steps to using this container to run the exercises described on the 2013 web page are
+1. In a terminal window carry out the following commands
 ```sh
-   $ docker build -t wlanderson/dsatclex .
-   $ docker run -i -t wlanderson/dsatclex
+  $ mkdir ~/workbench
+  $ cd ~/workbench
 ```
-4. This leaves you at a root login command prompt "#".
+2. Assuming your cursor is in the working directory enter the following at the command prompt:
+```sh
+   $ docker pull wlanderson/dsatclwb
+   $ docker run -i -t wlanderson/dsatclwb
+```
+3. This leaves you at a root login command prompt "#".
 
-5. From here you can type in commands to work with the specified command-line tools.
+4. From here you can type in commands to work with the specified command-line tools.
 
