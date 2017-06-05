@@ -17,3 +17,5 @@ Ubuntu VM setup at the iSchool.)
 4. [2017-04-15] Setup a dsatclAssignment on a Ubuntu 16.04.2
    VM. Updated record of tool installations in the individual
    "notes.txt" files.
+
+5. [2017-06-05] Added a folder to capture setting up a Docker container for the exercises.
