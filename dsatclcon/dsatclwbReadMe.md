@@ -9,14 +9,21 @@ Once finished with the exercises the container can be thrown away. Further exper
 
 These notes reflect changes to the commands in Janssens 2013 post so that they can be executed in this container. 
 
-Suggestion: create a directory in which to do your work (e.g., ~/workbench).
+Running this container will position you in the "/" directory as user
+"root" at a command line prompt "bash-4.3# "
+Suggestion: create a directory in which to do your work (e.g., ~/workbench):
+```sh
+bash-4.3# mkdir ~/workbench && cd ~/workbench
+```
 
 ## Tool 1. jq - sed for JSON
-
 - The json data does not need to be downloaded from NYT. The API has changed and the URL for this example may not work.
      
 - Data files in json format are available in /usr/local/opt/dsatcl/ .
-     Suggestion: copy the json file nyt.json to your working directory.
+     Suggestion: copy the json file nyt.json to your working directory; e.g.
+```sh
+bash-4.3# cp /usr/local/opt/dsatcl/nyt.json .
+```
 
 ## Tool 2. json2cvs
 - The webpage expects the file 'million.json' to be captured from the last Tool 1 example.
