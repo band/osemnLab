@@ -1,5 +1,6 @@
 # Data Science at the command line. Introductory exercises.
 2017-06-05, William L. Anderson
+(Updated: 2017-06-25, WLA)
 
 The goal of this container is to provide a terminal command line prompt that enables someone to reproduce most of the examples provided in a 2013 internet post by Jeroen Janssens entitled ["7 command-line tools for data science"](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html). The material in this website post was incorporated in an expanded 2014 book titled ["Data Science at the Command Line"](http://datascienceatthecommandline.com/).
 
@@ -9,9 +10,16 @@ Once finished with the exercises the container can be thrown away. Further exper
 
 These notes reflect changes to the commands in Janssens 2013 post so that they can be executed in this container. 
 
+To run this container a copy of the Docker program must be installed. The free [Docker Community Edition](https://www.docker.com/community-edition) is recommended for this introductory container. Once Docker is installed and running, this particular container can be downloaded and run inside a terminal window with the following commands.
+
+```sh
+   $ docker pull wlanderson/dsatclwb
+   $ docker run -i -t wlanderson/dsatclwb
+```
 Running this container will position you in the "/" directory as user
 "root" at a command line prompt "bash-4.3# "
-Suggestion: create a directory in which to do your work (e.g., ~/workbench):
+
+Suggestion: inside the container create a directory in which to do your work (e.g., ~/workbench):
 ```sh
 bash-4.3# mkdir ~/workbench && cd ~/workbench
 ```
