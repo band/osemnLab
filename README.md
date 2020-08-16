@@ -19,3 +19,6 @@ Ubuntu VM setup at the iSchool.)
    "notes.txt" files.
 
 5. [2017-06-05] Added a folder to capture setting up a Docker container for the exercises.
+
+6. [2020-08-16] Docker container removed from Docker repository site.
+   No long-term preservation available and Docker software has evolved.
